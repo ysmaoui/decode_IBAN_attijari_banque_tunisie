@@ -19,7 +19,7 @@ python3 decode_iban.py "[IBAN_number]"
     ```
 
 
-## sample output:
+## sample output
 
 ```sh
 Code pays: TN59
@@ -32,3 +32,7 @@ Clé banque centrale: xx
 =============ajout beneficaire attijari=========
 Agence: 123  N° Compte: 1234567891  Clé: 1
 ```
+
+## References
+
+The code for checking the validation of the IBAN was taken from REF: [<https://rosettacode.org/wiki/IBAN#Python>]
