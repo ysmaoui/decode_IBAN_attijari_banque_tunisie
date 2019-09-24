@@ -42,6 +42,11 @@ class attijari_account:
         else:
             return True
 
+    def get_pretty_iban(self):
+        return self.countrycode + " " + self.centralBank_bankcode + " " \
+            + self.centralbank_agencycode + " " + self.internal_agencycode + " " \
+            + self.account_number + " " + self.centralbank_key
+
 if __name__ == '__main__':
 
     arguments = sys.argv
@@ -52,6 +57,7 @@ if __name__ == '__main__':
         iban = sys.argv[1]
     account = attijari_account(iban)
 
+    print("IBAN: %s" % account.get_pretty_iban())
     print("Code pays: %s" % account.countrycode)
     print("Code banque à la banque centrale: %s" % account.centralBank_bankcode)
     print("Code agence à la banque centrale: %s" % account.centralbank_agencycode)
